@@ -1,28 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hank Quinlan, Horrible Cop</title>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="blurb">
-                <h1>Hi there, I'm Hank Quinlan!</h1>
-                <p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-            </div><!-- /.blurb -->
-        </div><!-- /.container -->
-        <footer>
-            <ul>
-                <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-                <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-            </ul>
-        </footer>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <link rel="stylesheet" href="../css/rest.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/content.css">
+</head>
+<body>
+    <div class="zq-carousel" id="box" style="margin-top: 10px">
+        <div zq-carousel-item="">
+            <div><div class="imgBox"></div><p class="text">第一张图片</p></div>
+            <div><div class="imgBox"></div><p class="text">第二张图片</p></div>
+            <div><div class="imgBox"></div><p class="text">第三张图片</p></div>
+            <div><div class="imgBox"></div><p class="text">第四张图片</p></div>
+        </div>
+    </div>
+    <div class="zq-carousel" id="box1" style="margin-top: 10px">
+        <div zq-carousel-item="">
+            <div>第1张</div>
+            <div>第2张</div>
+            <div>第3张</div>
+            <div>第4张</div>
+        </div>
+    </div>
+    <script src="../common/jquery-1.11.0.min.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script>
+        //调用
+        let box = new carousel();
+        box.render({
+            elem: '#box'
+            ,arrow: 'always',
+            full:false,
+            index:2
+        });
+
+        let box1 = new carousel();
+        box1.render({
+            elem: '#box1'
+            ,arrow: 'always',
+            autoplay:true,
+            anim: 'updown',
+            trigger: 'hover'
+        });
+
+    </script>
+</body>
 </html>

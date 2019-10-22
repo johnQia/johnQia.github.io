@@ -1,0 +1,44 @@
+.zq-tab{
+    width: 1200px;
+    margin: 5px auto;
+}
+.zq-tab .zq-tab-title{
+    display: flex;
+    display: -webkit-flex;
+    border-bottom: 1px solid #c0c0c0;
+}
+.zq-tab .zq-tab-title li{
+   height: 30px;
+    line-height: 30px;
+    padding: 0 14px;
+    border: 1px solid #c0c0c0;
+    border-right: none;
+    border-bottom: none;
+    cursor: pointer;
+}
+.zq-tab .zq-tab-title li:last-child{
+    border-right: 1px solid #c0c0c0;;
+}
+.zq-tab[zq-allowClose=true] .zq-tab-title li i:after{
+    content: "X";
+    margin-left: 6px;
+    padding: 0 4px;
+    color:#d4caca;
+}
+.zq-tab[zq-allowClose=true] .zq-tab-title li i:hover:after{
+    background: #ff2e1f;
+    color: #fff;
+    border-radius:50% ;
+}
+.zq-tab .zq-tab-title .zq-this{
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+    background: #fff;
+}
+.zq-tab-content .zq-tab-item{
+    padding: 10px;
+    display: none;
+}
+.zq-tab-content .zq-this{
+    display: block;
+}
